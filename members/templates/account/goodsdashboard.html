@@ -1,0 +1,52 @@
+
+{% include 'account/base.html'%}
+{% load static %}
+<div id="contentwrap"> 
+<div style="clear:both;"> </div> 
+<div id="filtersBox">
+<table>
+<form action="" method="GET"></form>
+<input type="hidden" name="lang" value="lt">
+<input type="hidden" name="class" value="goods">
+<input type="hidden" name="action" value="viewManage">
+<tbody><tr>
+</tbody></table></div>
+<div style="margin:10px 0px;"><a href="{% url 'savegoods'%}" class="lisaUusArve"> <img src="{% static 'image/plus.png'%}" height="20"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &nbsp;ADD NEW</font></font></a> &nbsp;&nbsp;<a href="" class="lisaUusArve"> <img src="{% static 'image/plus.png'%}" height="20"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &nbsp;CATEGORIES</font></font></a></div>
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GOODS</font></font></h3>
+<div class="viewManageDiv">
+<table width="100%" class="table-style viewManageTable"><tbody><tr>
+<td class="table-heading" style="width:14px;"><input type="checkbox" onclick="toggle(this)"></td>
+<td class="table-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Title</font></font></td><td class="table-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Price</font></font></td>
+<td class="table-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Position</font></font></td>
+<td class="table-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Edit</font></font></td>
+<td class="table-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Copy</font></font></td>
+<td class="table-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">delete</font></font></td>
+</tr>
+<form action="" metod="get"></form>
+<input type="hidden" name="lang" value="lt">
+<input type="hidden" name="class" value="goods">
+</tbody></table>
+</div>
+<div id="massActionWrap"><select id="massActions" name="action"><option value="delete"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">delete</font></font></option><option value="export"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Export (CSV)</font></font></option></select><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input onclick="massAction(&#39;lt&#39;,&#39;goods&#39;,&#39;Ar tikrai?&#39;,&#39;Siųsti į kitą el.paštą&#39;);" type="button" value="OK"></font></font> </div>
+
+
+ 
+ <div style="clear:both;"> </div>
+
+
+
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78874400-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body></html>

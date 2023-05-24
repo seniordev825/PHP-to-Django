@@ -1,0 +1,2812 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://www.inv24.lt/index.php?lang=lt&class=invoices&action=viewAdd -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Inv24</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"><!-- Global site tag (gtag.js) - Google Ads: 980236074 -->
+<script async="" src="./goodshow_files/analytics.js.download"></script><script async="" src="./goodshow_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-980236074');
+</script>
+
+<style>
+HTML, BODY, P, FORM { 
+	margin: 0px; 
+	padding: 0px; 
+	}
+	
+input[type=submit],input[type=button]{
+
+-webkit-appearance: none;
+
+}
+	
+input[type=button], input[type=submit], textarea, select, input[type=text], input[type=numeric], input[type=number], input[type=password], input[type=image] {
+
+border-radius:3px;
+
+}
+
+select, input[type=file] {
+
+background-color:white;
+
+}
+	
+TABLE { 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	}
+	
+table th, table td {  
+	vertical-align: top;
+	}
+
+IMG {
+	border:0px;
+	}
+
+label {
+	font-weight: bold;
+	}
+
+blockquote { 
+	margin-left: 10em; 
+	padding-left: 1em; 
+	border-left: 2px solid #ccc;
+	}
+
+.korvTable img, .viewManageTable img:not(.invTypeIcon, .sendInvImg, .isSeenImg, .sentImg){
+  width: 16px;
+  height: 16px;
+}
+
+.viewManageTable img:not(.invTypeIcon, .sendInvImg, .isSeenImg, .sentImg){
+  opacity: 0.9;
+}
+
+.viewManageTable img:hover:not(.invTypeIcon, .sendInvImg, .isSeenImg, .sentImg){
+  opacity: 1;
+}
+	
+.invTypeIcon{
+width:15px;
+height: 15px;
+}
+
+.sendInvImg{
+width:22px;
+height:16px;
+}
+
+.isSeenImg{
+width:16px;
+height:16px;
+}
+
+.sentImg{
+width:11px;
+height:11px;
+}
+	
+
+
+
+body#mainMenuShadow {
+	background-image:url(https://www.inv24.com/images/mainMenuBack.jpg);
+	background-position:left;
+	background-repeat:repeat-y;
+	}
+	
+ul.userNavigation  {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	}
+
+ul.userNavigation  ul {	
+	list-style:none;
+	margin:0px;
+	padding:0px 0px 0px 5px;
+	}
+	
+ul.userNavigation li a {
+ 	voice-family: "\"}\""; 
+ 	voice-family: inherit;
+	text-decoration: none;
+	color:#fff;
+	padding:5px;
+	}	
+
+ul.userNavigation li a:link,ul.userNavigation a:hover, ul.userNavigation li a:visited {
+	display: block;
+	}
+
+ul.userNavigation li a:hover {
+	display: block;
+	background-color:#86B7C8;
+	color:#fff;
+	padding:5px;
+	}
+	
+ul.userNavigation  li#current  a{
+	display: block;
+	background-color:#86B7C8;
+	color:#fff;
+	padding:5px;
+	}	
+	
+a.lisaUusArve {
+	padding:5px 10px;
+	background-color:#E9FFB7;
+	border:1px solid #ccc;
+	vertical-align:middle;
+	font-weight:100;
+	font-size:20px;
+	margin:10px 0px;
+	display:inline-table;
+	color:#032332 !important;
+	border-radius: 6px;
+	}
+	
+a.lisaUusArve:hover {
+	padding:5px 10px;
+	color:#000;
+	background-color:#D8FF7F;
+	vertical-align:middle;
+	font-weight:100;
+	font-size:20px;
+	margin:10px 0px;
+	display:inline-table;
+	color:#032332 !important;
+-webkit-box-shadow:0 0 7px rgba(50,50,50,.28);
+-moz-box-shadow:0 0 7px rgba(50,50,50,.28);
+box-shadow:0 0 7px rgba(50,50,50,.28);
+	}
+	
+.datepick:read-only{
+
+background-color: white;
+color: white;
+
+}
+	
+.lisaUusArve IMG {
+	position:relative;
+	top:2px;
+	height:20px;
+	width:20px;
+	}
+	
+.lisaToote {
+	background-color:#fff;
+	background-image:url(https://www.inv24.com/images/plus_small.png);
+	background-repeat:no-repeat;
+	background-position:8px center;
+	font-weight:bold;
+	background-size:12px 12px;
+	padding:4px 4px 4px 12px;
+	cursor:pointer;
+	max-width: 30px !important;
+	overflow:hidden;
+	}	
+	
+.lisaToote:hover {
+	background-color:#E9FFB7;
+	background-image:url(https://www.inv24.com/images/plus_small.png);
+	background-repeat:no-repeat;
+	background-position:8px center;
+	font-weight:bold;
+	background-size:12px 12px;
+	padding:4px 4px 4px 12px;
+	cursor:pointer;
+	max-width: 30px !important;
+	overflow:hidden;
+
+	}
+	
+.lisaToote:focus {
+	background-color:#F4FCF4;
+	background-image:url(https://www.inv24.com/images/plus.png);
+	background-repeat:no-repeat;
+	background-position:8px center;
+	font-weight:bold;
+	background-size:12px 12px;
+	padding:4px 4px 4px 12px;
+	cursor:pointer;
+	max-width: 30px !important;
+	overflow:hidden;
+	}
+	
+.myNormalLink {
+
+cursor:pointer !important;
+text-decoration:underline !important;
+color: black !important;
+
+}
+
+.myNormalLink:hover {
+	text-decoration: none !important;
+	}
+
+.toodeteList:hover {
+	text-decoration: none !important;
+	}
+	
+a.registrationButton {
+	background-color:#36a811 !important;
+	padding:10px 30px;
+	border-radius: 5px;
+	border:1px solid #fff;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color:white !important;
+	text-transform:uppercase;
+	font-size:16px;
+	font-weight:bold;
+	display:inline-table;
+	margin-top:10px;
+	}
+
+a.registrationButton:hover {
+	background-color:#008811 !important;
+	padding:10px 30px;
+	border-radius: 5px;
+	border:1px solid #fff;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color:white !important;
+	text-transform:uppercase;
+	font-size:16px;
+	font-weight:bold;
+	display:inline-table;
+	margin-top:10px;
+	}
+	
+.arveEelvaade {
+	background-image:url(https://www.inv24.com/images/arrowRight.png);
+	background-repeat:no-repeat;
+	background-position:6px center;
+	background-color:#699CAD !important;
+	color:white !important;
+	font-weight:bold;
+	padding:5px 5px 5px 28px;
+	cursor:pointer;
+	margin-top:15px;
+	border:1px solid #000;
+	text-transform:uppercase;
+	border-radius:4px;
+	}
+	
+.arveEelvaade:hover {
+	background-color:#E8F3F7;
+	background-image:url(https://www.inv24.com/images/arrowRight.png);
+	background-repeat:no-repeat;
+	background-position:6px center;
+	background-color:#699CAD !important;
+	color:white !important;
+	font-weight:bold;
+	padding:5px 5px 5px 28px;
+	cursor:pointer;
+	margin-top:15px;
+	border:1px solid #000;
+	text-transform:uppercase;
+	}
+	
+.arveEelvaade:focus {
+	background-color:#E8F3F7;
+	background-image:url(https://www.inv24.com/images/arrowRight.png);
+	background-repeat:no-repeat;
+	background-position:6px center;
+	font-weight:bold;
+	padding:5px 5px 5px 28px;
+	cursor:pointer;
+	margin-top:15px;
+	border:1px solid #000;
+	text-transform:uppercase;
+	}
+	
+#filtersBox {
+	background-color:#f2f2f2;
+	background-image:url(https://www.inv24.com/images/filtersBg.jpg);
+	background-position:center;
+	padding:5px;
+	border:1px solid #ccc;
+	border-radius:4px;
+	white-space: nowrap;
+	}
+
+#filtersBox select {
+	padding:4px;
+	background-color:white;
+	width:100px;
+	margin-left:5px;
+	height: 27px;
+	}
+	
+	
+@media screen and (min-width: 1016px) {	
+select:not(#promoInvoiceType) { height: 27px; }
+#g_discount_type { height: 24px !important; }
+}
+	
+#massActionWrap {
+	background-color:#f1f1f1;
+	border:1px solid #ccc;
+	margin:10px 0px;
+	padding:5px;
+	border-radius:4px;
+	}
+	
+#massActionWrap select {
+	padding:5px;
+	}
+
+#massActionWrap input {
+	padding:5px;
+	background-color:#FFFFFF;
+	font-weight:bold;
+	margin-left:10px;
+	}
+
+#massActionWrap input:hover {
+	padding:5px;
+	background-color:#E9FFB7 !important;
+	font-weight:bold;
+	cursor:pointer;
+	margin-left:10px;
+	}
+
+.isPayed0 {
+	background-color:#FCE3E3;
+	color:#000;
+	border-color:#fff;
+       }
+
+.isPayed1 {
+background-color:#E8FFE8;
+color:#000;
+border-color:#fff;
+       }
+
+.isPayed2 {
+background-color:#ccc;
+color:#000;
+border-color:#fff;
+       }
+	   
+#korv {
+	padding:7px 10px 7px 10px;
+	background-color:#F4FCF4;
+	border:1px solid #799A32;
+	margin-bottom:10px;
+	border-radius:10px;
+	width:100%;
+	}
+
+#contentwrap {
+	margin-left:100px;
+	margin-right:20px;
+	padding-top:20px;
+	}
+	
+.menubox {
+	background-color:#BEDDE8;
+	height:39px;
+	clear:both;
+	margin:auto;
+	margin-top:20px;
+	margin-bottom:10px;
+	border:1px solid #699CAD;
+	border-radius: 4px;
+	}
+
+        .bigButton, .bigButton:focus, .bigButton:hover {
+            margin: 3px 0px 0px 0px;
+            width: auto;
+            overflow: visible;
+            cursor: pointer;
+            border: 1px solid #999;
+            background-position: 50% 20%;
+            background-repeat: repeat-x;
+            font-weight: 700;
+            padding: 10px 20px 10px 20px;
+            border-radius:6px !important;
+            color: #000;
+            text-transform:uppercase;
+            background-image: url(https://www.inv24.com/images/boxBg.jpg);
+            background-color:#fff !important;
+        }
+
+        .bigButton:focus, .bigButton:hover {
+            background-image: none;
+            background-position: 50% 20%;
+        }
+
+
+body, html {
+	font-family:Tahoma;
+	font-size:12px;
+	color:#000;
+	}
+	
+html { 
+		overflow-y: scroll !important;
+		}
+		
+a, a:link, a:active {
+	color:#799A32;
+	text-decoration:none;
+	}
+	
+a:visited {
+	color:#799A32;
+	text-decoration:none;
+	}
+	
+a:hover {
+	color:#799A32;
+	text-decoration:none;
+	}
+	
+h1 {
+	font-size: 24px;
+	margin: 0 0 0.5em 0;
+	padding: 0;
+	font-weight:100;
+	color:#56721C;
+	}
+
+h2 {
+	font-size: 18px;
+	color:#799A32;
+	text-transform:uppercase;
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+	}
+	
+h3 {
+	font-size: 12px;
+	margin: 0px 0px 5px 0px;
+	padding: 0;
+	color:#FF6600;
+	}
+	
+h4 {
+	font-size: 3em;
+	line-height: 1.5em;
+	margin: 0 0 0.5em 0;
+	padding: 0;
+    color: black;
+	}
+	
+.span-header {
+	position:relative; 
+	padding:2px 10px 1px 10px; 
+	border:1px solid #ccc;
+	background-color:white;
+	border-bottom:none;
+	color:black;
+	font-weight:100;
+	font-family:Trebuchet MS;
+	font-size:17px;
+	border-radius: 6px 6px 0px 0px;
+	}
+	
+.masterTooltip {
+  position:relative;
+  font-size:12px;
+  text-transform: none;
+  font-weight: normal;
+}
+
+.masterTooltip img{
+  height: 15px;
+  width: 15px;
+}
+
+.masterTooltip:before {
+  content: attr(data-title);
+  position:absolute;
+  
+  top:50%;
+  transform:translateY(-50%);
+  
+  left:100%;
+  margin-left:4px;
+  
+  width: max-content; 
+  max-width:250px;
+  padding:11px;
+  border-radius:6px;
+  background:#000;
+  color: #fff;
+
+  display:none;
+    animation: 0.6s ease-out 0s 1 slideInFromLeftTooltip;
+}
+
+.masterTooltip:hover:before {
+  display:block;
+}
+
+
+.masterTooltip:after {
+  content: "";
+  position:absolute;
+  
+  left:100%;
+  margin-left:-5px;
+ 
+  top:50%;
+  transform:translateY(-50%);
+ 
+  border:5px solid #000;
+  border-color: transparent black transparent transparent;
+  
+  display:none;
+}
+.masterTooltip:hover:before, .masterTooltip:hover:after {
+  display:block;
+}
+
+.masterTooltip > img {
+   opacity: 0.4;
+}
+
+.masterTooltip:hover > img {
+   opacity: 1;
+}
+
+@keyframes slideInFromLeftTooltip {
+  0% {
+    background: rgba(0, 0, 0, 0.0001);
+  }
+  100% {
+    background: rgba(0, 0, 0, 1);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+	
+.status2 {
+            background-position: 10px center;
+            background-repeat: no-repeat;
+            padding: 18px 5px 11px 47px;
+            color: #000;
+            font-size: 12px;
+            font-weight: 700;
+            min-height:25px;
+            animation: 1.5s ease-out 0s 1 slideInFromLeft;
+            border-radius:10px;
+            margin:0px 0px 10px 0px;
+        }
+        
+       .status {
+            background-position: 10px center;
+            background-repeat: no-repeat;
+            padding: 18px 5px 11px 47px;
+            color: #000;
+            font-size: 12px;
+            font-weight: 700;
+            min-height:25px;
+            animation: 2s ease-out 0s 1 slideInFromLeft;
+            border-radius:10px;
+            margin:0px 0px 10px 0px;
+        }
+
+        .error {
+            background-image:url(https://www.inv24.com/components/Misc/images/icons/error.png);
+            border: 1px solid red;
+            background-color: #fcf5f5;
+            line-height: 12px;
+        }
+
+        .attention {
+            background-image:url(https://www.inv24.com/components/Misc/images/icons/attention.png);
+            border: 1px solid #F60;
+            background-color: #fff7ed;
+        }
+
+        .success {
+            background-image:url(https://www.inv24.com/components/Misc/images/icons/rigth_arrow.png);
+            border: 1px solid #72A934;
+            background-color: #f5faf0;
+        }
+
+	
+#tabs{
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#tabs li{
+  float: left;
+  margin: 0 .5em 0 0;
+}
+
+#tabs a{
+  position: relative;
+  padding: .7em 1.5em;
+  float: left;
+  text-decoration: none;
+  color: #111;
+  text-shadow: 0 2px 0 rgba(255,255,255,.8);
+  background-color: #E8F3F7;
+  margin-right:0px;
+  border: 1px solid #699CAD;
+  border-bottom:none;
+  border-radius:6px 6px 0px 0px;
+}
+
+#tabs a:hover,
+#tabs a:hover::after,
+#tabs a:focus,
+#tabs a:focus::after{
+  background: white;
+}
+
+#tabs a:focus{
+  outline: 0;
+}
+
+#tabs #current a,
+#tabs #current a::after{
+  background: #fff;
+  border-bottom: none !important;
+}
+
+.tabsMobile{
+
+display:none;
+
+}
+
+#content {
+    background: #fff;
+    padding: 0px;
+    position: relative;
+    box-shadow: 0 -20px 20px -20px rgba(0, 0, 0, .5);
+}
+
+.tabDiv {
+
+border:1px solid #ccc;
+border-radius: 0px 15px 15px 15px !important;
+padding:5px;
+
+}
+
+.content {
+	padding:10px;
+	}
+	
+input {
+	font-family:Tahoma;
+	font-size:12px;
+	color:#000;
+    margin: 0;
+	padding:4px 2px;
+	border:1px solid #ccc;
+	}
+	
+input:focus {
+	font-family:Tahoma;
+	font-size:12px;
+	color:#000;
+    margin: 0;
+	padding:4px 2px;
+	border:1px solid #333;
+	background-color:#F4FCF4;
+	font-weight:bold;
+	}
+	
+textarea {
+	font-family:Tahoma;
+	font-size:12px;
+	color:#000;
+    margin: 0;
+	padding:4px 2px;
+	border:1px solid #ccc;
+	width:250px;
+	height:57px;
+	max-width: 97%;
+	
+	}
+
+textarea:focus {
+	font-family:Tahoma;
+	color:#000;
+    margin: 0;
+	padding:4px 2px;
+	border:1px solid #ccc;
+	width:250px;
+	background-color:#F4FCF4;
+	font-weight:bold;
+	}
+	
+select[name=currency] {
+	width:256px;
+	}
+input[type=text], input[type=text]:focus  {
+		width:250px;
+}
+input[type=password], input[type=password]:focus {
+		width:250px;
+}
+
+.invoice_nr{
+width:100px !important;
+}
+
+.invoice_nr_prefix_suffix{
+width:65px !important;
+}
+
+
+input[type=button],  input[type=submit] {
+	background-color:white;
+	border:1xp solid #ccc;
+	font-weight:bold;
+	cursor:pointer;
+	background-color:#F4FCF4;
+	width: auto !important;
+	
+	}
+
+input[type=button]:hover,  input[type=submit]:hover {
+	border:1xp solid #ccc;
+	font-weight:bold;
+	cursor:pointer;
+	background-color:#E9FFB7;
+	}
+	
+input[type=submit]:hover:not([class]){
+
+background-color:#E9FFB7 !important;
+
+}
+	
+select  {
+	font-family:Tahoma;
+	font-size:12px;
+	color:#000;
+    margin: 0;
+	padding:4px 2px;
+	border:1px solid #ccc;
+	}
+
+
+input[readonly] {
+	font-family:Tahoma;
+	font-size:12px;
+	color:#000;
+    margin: 0;
+	padding:4px 2px;
+	border:1px solid #ccc;
+	background-color:#F4F4F4;
+	}
+	
+table.table-style {
+	width:100%;
+	}
+	
+table.table-style td {
+	padding:4px;
+	color:black;
+	vertical-align:middle;
+	}
+	
+table.table-style td.table-heading {
+	background-color:#BEDDE8;
+	background-image:url(https://www.inv24.com/images/table-header.jpg);
+	background-position:center;
+	border-left:1px solid #A4CBD8;
+	border-right:1px solid #A4CBD8;
+	padding:8px 4px;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size:11px;
+	}
+
+table.table-style:not(.templatesPage) tr:hover {
+	background-color:#E8F3F7;
+	}
+	
+table.table-style:not(.templatesPage) tr:hover:nth-child(odd) {
+	background-color:#E8F3F7;
+	}
+	
+table.table-style:not(.templatesPage) tr:nth-child(odd) {
+	background-color:#f4f4f4;
+}
+
+table.templatesPage tr {
+	background-color:#f4f4f4;
+}
+
+table.view-edit-table tr td:nth-of-type(1){
+
+width: 230px;
+
+}
+
+table.viewAddInvoiceMain tr td:nth-of-type(1){
+
+max-width: 450px;
+width: 1px;
+
+}
+
+table.viewAddInvoiceMain table.view-edit-table tr td:nth-of-type(1){
+
+min-width: 160px;
+
+}
+
+
+table.table-style tr:first-child td:first-child{border-top-left-radius:10px;border:none !important;}
+table.table-style tr:first-child td:last-child{border-top-right-radius:10px;border:none !important;}
+
+table.table-style tr:last-child td:first-child{border-bottom-left-radius:10px;border:none !important;}
+table.table-style tr:last-child td:last-child{border-bottom-right-radius:10px;border:none !important;}
+
+table.table-style2 tr{
+	background-color:transparent !important;
+}
+
+.stepGuide {
+		font-family: 'Open Sans Condensed', sans-serif;
+		margin-bottom:15px;
+		margin-top:25px;
+		font-size:20px;
+		color:#0C3E4E;
+		text-transform:uppercase;
+		font-weight:bold;
+		background-position: 10px center;
+		background-repeat:no-repeat;
+		padding:8px 5px 8px 47px;
+		border-radius:5px;
+		border: 1px solid #799A32;
+		background-color: #F4FCF4;
+		}
+	
+div#steps {
+	margin-bottom:10px;
+	}
+	
+div#steps span.number {
+	background-color:#F8FFEA !important;
+	padding:10px 20px;
+	border-radius: 5px;
+	border:1px solid #E0EDC7;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color:#E0EDC7 !important;
+	text-transform:uppercase;
+	font-size:20px;
+	font-weight:bold;
+	display:inline-table;
+	margin-top:10px;
+	}
+	
+div#steps span.number:hover {
+	color:#999999 !important;
+	}
+	
+div#steps span.number-current {
+	background-color:#699CAD !important; 
+	padding:10px 20px;
+	border-radius: 5px;
+	border:1px solid #fff;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color:white !important;
+	text-transform:uppercase;
+	font-size:20px;
+	font-weight:bold;
+	display:inline-table;
+	margin-top:10px;
+	-webkit-box-shadow: 0px 0px 25px rgba(50, 50, 50, 0.68);
+-moz-box-shadow: 0px 0px 25px rgba(50, 50, 50, 0.68);
+box-shadow: 0px 0px 25px rgba(50, 50, 50, 0.68);
+	}
+	
+div#steps span.number-current:hover {
+color:#e3dddc !important;
+}
+	
+div#steps span.stepText   {
+	padding:10px 20px;
+	border:1px solid transparent;
+	font-family: 'Open Sans Condensed', sans-serif;
+	color:#999999;
+	text-transform:uppercase;
+	font-size:20px;
+	font-weight:bold;
+	display:inline-table;
+	margin-top:10px;
+	}
+	
+.stepTextCurrent{
+
+color:black !important;
+
+}
+	
+div#steps span.stepText:hover   {
+color:#000;
+}	
+	
+a.steps {
+	float:right;
+	padding:5px 20px;
+	background-color:#699CAD;
+	font-weight:bold;
+	color:white !important;
+	}
+a.steps img {
+	position:relative;
+	top:3px;
+	}
+	
+#card-number {
+  border: 10px solid #333 !important;
+  -webkit-transition: border-color 160ms;
+  transition: border-color 160ms;
+}
+
+#card-number.braintree-hosted-fields-focused {
+  border-color: #777;
+}
+
+#card-number.braintree-hosted-fields-invalid {
+  border-color: tomato;
+}
+
+#card-number.braintree-hosted-fields-valid {
+  border-color: limegreen;
+}
+
+.registerButtonBlock{
+
+position:fixed;
+bottom:-4px;
+right:30px;
+z-index:3;
+
+}
+
+.mobileBottomMenu{
+
+display:none;
+
+}
+
+ 
+.mftable {
+//overflow:hidden;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.mftable th,
+.mftable td {
+  text-align: left;
+  padding: 7px !important;
+  vertical-align: middle;
+}
+
+.mftable tr:nth-child(even), th {
+	background-color:#f4f4f4;
+}
+
+.mftable tr:hover{
+	background-color:#E8F3F7;
+	}
+	
+.mftable tr:hover:nth-child(odd){
+	background-color:#E8F3F7;
+	}
+
+.mftable th:first-child{border-top-left-radius:10px;}
+.mftable tr:first-child td:last-child, th:last-child{border-top-right-radius:10px;}
+
+.mftable tr:last-child td:first-child{border-bottom-left-radius:10px;}
+.mftable tr:last-child td:last-child{border-bottom-right-radius:10px;}
+
+.invoiceEditProducts{
+
+width:600px;
+
+}
+
+.add_product_table tr td{
+
+white-space: nowrap;
+
+}
+
+.add_product_table tr td:last-child{
+
+width: 100%;
+
+}
+
+.add_product_table select{
+
+width: 45px !important;
+
+}
+
+.my_discounts_block{
+
+text-align: center;
+
+}
+
+.korvTable tr td, th{
+
+padding: 3px !important;
+
+}
+
+
+
+.korvTable th{
+
+background-color: transparent !important;
+
+}
+
+.imgTplBlock{
+
+display: inline-block !important;
+vertical-align: top !important;
+width:22% !important;
+cursor: pointer !important;
+margin-left:1% !important;
+background-color:#f4f4f4 !important;
+
+}
+
+.imgTplBlock input[type=radio]{
+
+width: 15px !important;
+margin-top: 10px !important;
+
+}
+
+.html_data_form{
+
+width: 800px;
+border: 1px solid #000;
+
+}
+
+a.shrtlink {
+  color:black;
+  text-decoration: underline;
+  font-size: 15px;
+}
+
+a:hover.shrtlink {
+  text-decoration: none;
+}
+
+.viewAddInvoiceMain{
+
+width:100%;
+
+}
+
+.datepick{
+
+color: white;
+
+}
+
+@media screen and (max-width: 1015px) {
+
+input[type=button], input[type=submit], textarea, select, input[type=text], input[type=numeric], input[type=number], input[type=password], input[type=image] {
+
+border-radius:5px;
+
+}
+
+.invTypeIcon{
+width:20px !important;
+height:20px !important;
+}
+
+
+
+  .mftable thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+  }
+  
+  .mftable tr {
+    border-radius: 15px;
+    display: block;
+    padding: 0px;
+    margin:1px 1px 20px 1px;
+  }
+  
+  .mftable td {
+    display: block;
+    text-align: right;
+    padding: 7px 5px 7px 5px;
+  }
+  
+  .mftable td::before {
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+  }
+  
+  .mftable tr:nth-child(even), th {
+	background-color:#fff;
+}
+
+.mftable tr td:nth-child(odd) {
+	background-color:#f4f4f4;
+}
+
+.mftable tr td:first-child{border-radius: 10px 10px 0px 0px !important;background-color:#BEDDE8;background-image:url(https://www.inv24.com/images/table-header.jpg);background-position:center;}
+.mftable tr td:last-child{border-radius: 0px 0px 10px 10px !important;}
+
+.mftable tr:first-child td:last-child::before{
+
+content: none;
+
+}
+
+
+.mftable tr:last-child {margin-bottom:6px !important;}
+
+
+.leftMenuNavigationV1, .logOuterBlock, .userNavigation{
+
+display: none;
+
+}
+
+#contentwrap{
+
+margin-left:10px !important;
+margin-right:10px !important;
+padding-top: 5px !important;
+
+}
+
+#mainMenuShadow{
+
+background-image:none !important;
+margin-bottom: 90px;
+
+}
+
+.menubox{
+
+display: none;
+
+}
+
+*, .masterTooltip, input[type=file]{
+
+font-weight:400 !important;
+font-size: 16px;
+
+}
+
+b{
+
+font-weight:600 !important;
+
+}
+
+input[type=file]{
+
+margin-bottom: 12px !important;
+margin-top: 12px !important;
+
+}
+
+input:focus, textarea:focus{
+
+font-weight:600 !important;
+
+}
+
+input[type=button], input[type=submit], textarea, select, input[type=text], input[type=numeric], input[type=number], input[type=password], input[type=image] {
+    font-size: 16px;
+}
+
+#myOverlay *{
+
+font-size: 14px !important;
+color: black;
+font-weight:600 !important;
+
+}
+
+#myText{
+
+width:90% !important;
+height: calc(100% - 20px) !important;
+margin-left: 1px !important;
+border-radius:11px !important;
+
+}
+
+.registerButtonBlock{
+
+right:11px;
+
+}
+
+.table-style td{
+
+padding: 9px !important;
+
+}
+
+.view-edit-table {
+
+border-radius: 15px !important;
+//overflow:hidden;
+
+}
+
+.view-edit-table td{
+
+display:block;
+padding: 0px !important;
+margin-left: 5px !important;
+width: 100% !important;
+
+
+}
+
+.viewAddInvoiceMain td{
+
+display:inline-block;
+padding: 0px !important;
+margin-left: 0px;
+width: 100% !important;
+
+}
+
+.view-edit-table input:not(.invoice_nr,.invoice_nr_prefix_suffix), textarea:not(#tab4 .tabDiv textarea){
+
+width: 320px !important;
+
+}
+
+.invoice_nr{
+width: 135px !important;
+}
+
+.invoice_nr_prefix_suffix{
+width: 80px !important;
+}
+
+table.view-edit-table tr td:nth-of-type(2){
+
+padding-bottom: 15px !important;
+
+}
+
+table.view-edit-table tr td:nth-of-type(1){
+
+padding-top: 5px !important;
+
+}
+
+.view-edit-table h2{
+
+width: 100% important!;
+padding: 5px 0px 5px 0px;
+margin-left: 1px;
+
+}
+
+.viewAddInvoiceMain h2{
+
+width: 100% important!;
+padding: 5px 0px 5px 0px;
+margin-left: 1px;
+
+}
+
+
+.invoiceEditProducts{
+
+width:100% !important;
+border-radius: 15px !important;
+overflow: hidden;
+
+
+}
+
+.invoiceEditProducts tr {
+
+display:block;
+border-radius: 15px !important;
+border:1px solid #ccc !important;
+padding-bottom: 15px !important;
+margin-bottom: 20px !important;
+
+}
+
+.invoiceEditProducts td {
+
+padding-bottom: 10px !important;
+display:block;
+
+}
+
+
+.tplimg{
+
+width:90%;
+
+}
+
+.imgTplBlock{
+
+border-radius: 15px !important;
+max-width: 399px;
+text-align:center;
+
+}
+
+.tabDiv{
+
+padding: 10px 3px 10px 3px;
+
+}
+
+.masterTooltip img, .korvTable img{
+  width: 19px;
+  height: auto !important;
+}
+
+.viewManageTable img:not(.fixedSizeImg,.invTypeIcon){
+
+width: 20px;
+height: 20px !important;
+
+}
+
+.viewManageTable img{
+opacity: 1 !important;
+}
+
+.sendInvImg{
+
+width:30px;
+height: auto !important;
+text-align: center !important;
+
+}
+
+.sendInvImgSpan {
+
+text-align:center;
+width:100%;
+display:inline-block;
+
+}
+
+.masterTooltip:before {
+    animation: 0.1s ease-out 0s 1 slideInFromLeftTooltip;
+}
+
+.myNormalLink {
+
+padding-left: 2px;
+
+}
+
+
+.templatesPage {
+
+border-spacing: 0px; !important;
+border-collapse: collapse !important;
+
+}
+
+
+.templatesPage tr td{
+
+padding-left: 0px !important;
+margin: 0px !important;
+
+}
+
+.hide_it{
+
+display:none !important;
+
+}
+
+.html_data_form{
+
+width: 100% !important;
+
+}
+
+.stepGuide {
+		margin-top:15px;
+		font-weight:600 !important;
+		padding:8px 5px 8px 10px;
+}
+
+.stepText   {
+	padding:10px 20px;
+	font-size:16px !important;
+	font-weight:bold;
+	display:table-cell !important;
+	}
+	
+.promoContainer {
+
+display:block !important;
+
+}
+
+#korv {
+	padding:0px !important;
+	margin: 0px !important;
+	background-color:transparent !important;
+	border: none !important;
+	}
+	
+.productsTable{
+
+max-width:100%;
+margin-top:10px;
+display:table !important;
+padding-right: 0px !important;
+margin-right: 0px !important;
+
+}
+
+.productsTable tr td{
+
+display:table-cell !important;
+padding: 7px 0px 7px 5px !important; 
+width: 150px !important;
+
+}
+
+.productsTable tr td:nth-of-type(1){
+
+width: 300px !important;
+
+}
+
+.productsTable tr{
+
+display:table-row !important;
+
+}
+
+.add_product_table input[type=text]:not(.invoice_nr,.invoice_nr_prefix_suffix), .add_product_table input[type=numeric]{
+
+width: 320px !important;
+margin-bottom: 10px;
+
+}
+
+.invoice_nr{
+width: 135px !important;
+}
+
+.invoice_nr_prefix_suffix{
+width: 80px !important;
+}
+
+.add_product_table input[type=button]{
+
+padding: 7px 20px 7px 5px;
+margin-top: 0px;
+min-width: 130px;
+background-image:none;
+
+}
+
+.add_product_table tr td{
+
+white-space: normal;
+
+}
+
+.my_discounts_block{
+
+text-align: left;
+
+}
+
+.korvTable{
+
+width: 100%;
+
+}
+
+.korvTable tr{
+
+width: 100% !important;
+margin-bottom: 15px !important;
+margin-top: 10px !important;
+margin-right 0px !important;
+
+}
+
+.korvTable tr td{
+
+padding: 10px !important;
+width: 96% !important;
+text-align: right !important;
+background-color:#F4FCF4;
+border-right: 1px solid #ccc !important;
+border-left: 1px solid #ccc !important;
+
+}
+
+.korvTable tr td:first-child{
+
+border-top: 1px solid #ccc !important;
+
+}
+
+.korvTable tr td:last-child{
+
+border-bottom: 1px solid #ccc !important;
+
+}
+
+table.viewAddInvoiceMain tr td:nth-of-type(1){
+
+max-width: 99% !important;
+
+}
+
+#mylightbox{
+
+margin-top: 20px;
+
+}
+
+#tabs:not(.promo) {
+
+//display:none;
+width: 100%;
+
+}
+
+#tabs:not(.promo) li{
+  margin: 0 2px 0 0;
+  width: 100%;
+}
+
+#tabs a{
+  padding: .7em 0.5em;
+  width: 94%;
+  border-radius:6px;
+
+}
+
+.promo li{
+  margin-right: 15px !important;
+}
+
+.promo a{
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+
+#tabs #current a{
+
+font-weight: bold !important;
+
+}
+/*
+.tabsMobile{
+
+display:inline-block;
+max-width: 92%;
+width: auto;
+padding: 12px !important;
+font-weight: bold !important;
+margin-bottom: 10px;
+
+}
+*/
+
+.registerButtonBlock{
+
+display: none !important;
+
+}
+
+.registerButtonBlock{
+
+position:fixed;
+bottom:-4px;
+right:30px;
+z-index:3;
+
+}
+
+.mobileBottomMenu{
+
+display:block;
+position:fixed;
+bottom: 0px;
+z-index:3;
+width: 100%;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+text-align:center;
+border-top:1px solid white;
+background-color:#699CAD;
+
+}
+
+.mobileBottomMenu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.mobileBottomMenu ul li{
+
+display:block;
+float: left;
+width: 25%;
+margin: 0px !important;
+
+}
+
+.mobileBottomMenu ul li a {
+
+display:block;
+color:white;
+padding: 5px 0px 5px 0px !important;
+font-size: 12px;
+
+}
+
+.mobileBottomMenu ul li a img{
+
+height: 25px;
+
+}
+
+.mobileBottomMenu ul li#current a{
+	background-color:#86B7C8;
+	}
+	
+.leftMenuNavigationV1 {
+
+opacity: 95%;
+
+}
+
+.leftMenuNavigationV1 img {
+   display: inline-block !important;
+}
+
+#massActionWrap{
+
+display: none !important;
+
+}
+
+
+
+.viewManageDiv {
+  width: 100% !important;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.viewManageDiv::-webkit-scrollbar {
+
+display: none;
+
+}
+
+.viewManageTable {
+
+border:0;
+
+
+}
+
+.viewManageTable .table-heading{
+
+font-size: 16px !important;
+background-image:none !important;
+
+}
+
+.viewManageTable tr td:first-child{display: none !important;}
+
+.viewManageTable td:nth-child(2) {
+  position: sticky;
+  left: 0;
+  
+}
+
+.viewManageTable td:nth-child(2):hover:not(.table-heading) {
+
+background-color:#E8F3F7 !important;
+
+}
+
+.viewManageTable tr:first-child td:nth-child(2){border-radius:15px 0px 0px 0px;border-left:none;}
+
+
+.viewManageTable tr:nth-child(odd) td:nth-child(2):not(.table-heading){
+
+background-color:#f4f4f4;
+z-index: 2;
+
+}
+
+.viewManageTable tr:nth-child(even) td:nth-child(2):not(.table-heading){
+
+background-color:#fff;
+z-index: 2;
+
+}
+
+#filtersDateTxt {
+
+display: none;
+
+}
+
+#filtersBox {
+
+width: 96% !important;
+overflow-x: scroll;
+-ms-overflow-style: none;
+scrollbar-width: none;
+display:inline-block;
+text-align: left;
+white-space: normal;
+
+}
+
+#filtersBox::-webkit-scrollbar {
+
+display: none;
+
+}
+
+#filtersBox table{
+
+width: 100%;
+
+}
+
+#filtersBox tr td {
+
+display: inline !important;
+
+}
+
+#filtersBox input, #filtersBox select{
+
+-ms-box-sizing:content-box;
+-moz-box-sizing:content-box;
+-webkit-box-sizing:content-box; 
+box-sizing:content-box;
+
+width: 42% !important;
+margin-top: 3px;
+margin-bottom: 3px;
+padding: 5px !important;
+height: 20px;
+margin-left: 3px !important;
+margin-right: 3px !important;
+border-spacing: 0px;
+border-collapse: separate;
+
+}
+
+#filtersBox select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: white;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  border: 1px solid #dfdfdf;
+  margin-right: 2rem;
+  padding: 1rem;
+  padding-right: 2rem;
+}
+
+/*
+#filtersBox table td:last-child {
+  width:100%;
+}
+*/
+
+.currenciesList{
+ width: 100%;
+}
+
+.invoiceStat{
+
+width: 96% !important;
+min-width: unset !important;
+overflow-x: scroll;
+-ms-overflow-style: none;
+scrollbar-width: none;
+clear:both !important;
+float: none !important;
+
+}
+
+.invoiceStat::-webkit-scrollbar {
+
+display: none;
+
+}
+
+.invoiceStat table td{
+
+min-width: 160px !important;
+white-space: nowrap;
+
+}
+
+.invoiceStat tr td:nth-of-type(even){
+
+text-align:right;
+padding-right: 80px !important;
+
+}
+
+.tabDiv:not(.promoSteps) {
+
+border-radius: 15px !important;
+
+}
+
+.hideOverflow{
+
+overflow: hidden !important;
+
+}
+
+}
+
+@media screen and (max-width: 450px) {
+
+select{
+
+max-width: 285px;
+
+}
+
+}
+
+
+@media screen and (max-width: 350px) {
+
+.view-edit-table input:not(.invoice_nr,.invoice_nr_prefix_suffix), textarea:not(#tab4 .tabDiv textarea), .add_product_table input[type=text]:not(.invoice_nr,.invoice_nr_prefix_suffix), .add_product_table input[type=numeric]{
+
+width: 280px !important;
+
+}
+
+.invoice_nr{
+width: 110px !important;
+}
+
+.invoice_nr_prefix_suffix{
+width: 70px !important;
+}
+
+table.table-style2 td.table-heading:not(table.table-style2 td.table-heading:first-child) {
+	padding:5px 3px !important;
+}
+
+#myText{
+
+width:99% !important;
+
+}
+
+#filtersBox input, #filtersBox select{
+
+width: 42% !important;
+
+}
+
+.invoiceStat table td{
+
+min-width: 145px !important;
+white-space: nowrap;
+
+}
+
+}
+
+</style>
+
+<script type="text/javascript">
+
+function redirectCurrency(t){window.location.href=document.URL+"&currency="+t}
+
+function setElementsValueToNull(attribute){
+
+attribute.value = "";
+
+}
+
+function fillClients(id,lang){
+
+var client_name = document.getElementById("client_name");
+
+if(client_name != null)
+ client_name.value = "";
+
+
+var client_personal_code = document.getElementById("client_personal_code");
+
+if(client_personal_code != null)
+ client_personal_code.value = "";
+
+
+var client_vat_number = document.getElementById("client_vat_number");
+
+if(client_vat_number != null)
+ client_vat_number.value = "";
+ 
+ 
+var client_address = document.getElementById("client_address");
+
+if(client_address != null)
+ client_address.value = "";
+ 
+
+var client_postindex = document.getElementById("client_postindex");
+
+if(client_postindex != null)
+ client_postindex.value = "";
+ 
+ 
+var client_email = document.getElementById("client_email");
+
+if(client_email != null)
+ client_email.value = "";
+
+ 
+var attributes = document.querySelectorAll("[id^=attr_]");
+
+if(attributes != null){
+
+attributes.forEach(setElementsValueToNull);
+
+}
+
+var url="/index.php?lang="+lang+"&class=invoices&action=fillClients&id="+id;
+
+fetch(url)
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+  
+  if(myJson.name != null)
+  client_name.value = myJson.name;
+  
+  if(myJson.email != null)
+  client_email.value = myJson.email;
+  
+  if(myJson.address != null)
+  client_address.value = myJson.address;
+  
+  if(myJson.personal_code != null)
+  client_personal_code.value = myJson.personal_code;
+  
+  if(myJson.vat_number != null)
+  client_vat_number.value = myJson.vat_number;
+  
+  var json_attributes = myJson.attributes;
+  
+if(json_attributes != null){
+
+for (var key in json_attributes) {
+
+document.getElementById("attr_" + key).value = json_attributes[key];
+
+}
+
+}
+    
+  });
+
+}
+
+function addToLightbox(lang){
+
+var g_name_v = document.getElementById("g_name").value;
+var g_price_v = document.getElementById("g_price").value;
+var g_quantity_v = document.getElementById("g_quantity").value;
+var g_measurement_v = document.getElementById("g_measurement").value;
+var g_vat_v = document.getElementById("g_vat").value;
+var g_discount_v = document.getElementById("g_discount").value;
+var g_discount_type_v = document.getElementById("g_discount_type").value;
+
+if(g_name_v == "" || g_price_v == "")
+ return 0;
+ 
+var url="/index.php?class=invoices&action=addToLightbox&lang="+lang;
+
+var payload = {
+    g_name: g_name_v,
+    g_price: g_price_v,
+    g_quantity: g_quantity_v,
+    g_measurement: g_measurement_v,
+    g_vat: g_vat_v,
+    g_discount: g_discount_v,
+    g_discount_type: g_discount_type_v
+};
+
+var data = new FormData();
+data.append( "json", JSON.stringify( payload ) );
+
+
+fetch(url, {
+    method: "POST",
+    headers: {"Content-Type":"application/x-www-form-urlencoded"},
+    body: "g_name=" + encodeURIComponent(g_name_v) + "&g_price=" + g_price_v + "&g_quantity=" + g_quantity_v + "&g_measurement=" + encodeURIComponent(g_measurement_v) + "&g_vat=" + g_vat_v + "&g_discount=" + g_discount_v + "&g_discount_type=" + g_discount_type_v
+})
+  .then(function(response) {
+    return response.text();
+  })
+.then(function(data){ 
+
+    document.getElementById("korv").innerHTML = data;
+    document.getElementById("mylightbox").scrollIntoView({ behavior: "smooth" })
+
+})
+
+}
+
+function deleteFromLightbox(item_id,lang){
+
+var url="/index.php?class=invoices&action=deleteFromLightbox&lang="+lang;
+
+fetch(url, {
+    method: "POST",
+    headers: {"Content-Type":"application/x-www-form-urlencoded"},
+    body: "g_id=" + encodeURIComponent(item_id)
+})
+  .then(function(response) {
+    return response.text();
+  })
+.then(function(data){ 
+
+    document.getElementById("korv").innerHTML = data;
+
+})
+
+}
+
+function showLightbox(lang){
+
+var url="/index.php?class=invoices&action=showLightbox&lang="+lang;
+
+fetch(url)
+  .then(function(response) {
+    return response.text();
+  })
+  .then(function(data) {
+  
+  document.getElementById("korv").innerHTML = data;
+  
+})
+
+}
+
+function toggle(t){
+
+for(checkboxes=document.getElementsByName("id[]"),i=0;i<checkboxes.length;i++){
+
+checkboxes[i].checked = t.checked;
+
+if(checkboxes[i].checked)
+ checkboxes[i].closest("tr").style.backgroundColor = "#F6FFE2";
+else
+ checkboxes[i].closest("tr").style.backgroundColor = null;
+
+}
+
+}
+
+function makeCommand(item_id,item_value,url,confirmation){
+
+if(confirmation != "" && confirm(confirmation) == 0)
+ return 0;
+ 
+fetch(url, {
+    method: "POST",
+    headers: {"Content-Type":"application/x-www-form-urlencoded"},
+    body: "id=" + item_id + "&valuez=" + encodeURIComponent(item_value)
+})
+  .then(function(response) {
+    return response.text();
+  })
+.then(function(data){ 
+
+document.location.reload();
+
+})
+
+}
+
+function checkboxesStyleChange(){
+
+if(this.checked)
+ this.closest("tr").style.backgroundColor = "#F6FFE2";
+else
+ this.closest("tr").style.backgroundColor = null;
+
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {
+
+document.querySelectorAll('input[name="id[]"]').forEach(el => el.addEventListener("change", checkboxesStyleChange));
+
+
+
+var allDate = document.querySelectorAll("[id^=date]");
+
+allDate.forEach(showDatepicker);
+
+var allDateEl = document.querySelectorAll('input[type="date"]');
+
+allDateEl.forEach(el => el.addEventListener("change", changeDatepicker));
+
+
+if (matchMedia) {
+  var mq = window.matchMedia("(max-width: 1015px)");
+  mq.addListener(WidthChange);
+  WidthChange(mq);
+}
+
+})
+
+function WidthChange(mq) {
+
+if (mq.matches) {
+
+document.getElementById("leftMenuNavigationV1").addEventListener("click", function() {
+
+document.getElementById("leftMenuNavigationV1").style.display = "none";
+document.getElementById("logOuterBlock").style.display = "none";
+document.getElementById("userNavigation").style.display = "none";
+
+});
+  
+/*
+
+window.addEventListener("scroll", function() {
+
+var prevScrollX = sessionStorage.getItem("myScroll");
+
+var scrollX = document.documentElement.scrollTop;
+
+sessionStorage.setItem("myScroll", scrollX);
+
+var delta = prevScrollX - scrollX;
+
+deltaMod = Math.abs(delta);
+
+if(deltaMod < 25)
+ return;
+
+if(delta < 0)
+ document.getElementById("mobileBottomMenu").style.display = "none"; 
+else
+ document.getElementById("mobileBottomMenu").style.display = "block";
+
+});
+*/
+  
+  }
+}
+
+
+
+function showDatepicker(item){
+
+var itemId = item.id;
+
+var newEl = document.createElement("input");
+newEl.type = "date";
+newEl.setAttribute("value", item.value);
+newEl.style.visibility = "hidden";
+newEl.style.position = "absolute";
+newEl.id = itemId + "_picker";
+
+var currentEl = document.getElementById(itemId);
+var parentNode = currentEl.parentNode;
+
+parentNode.insertBefore(newEl, currentEl);
+
+item.addEventListener("click", showDatepickerDisplay);
+
+
+var today  = new Date(item.value);
+
+if(item.value != "" && item.value != "0000-00-00")
+ item.value = today.toLocaleDateString("lt-LT");
+else
+ item.value = "";
+ 
+item.style.color = "rgba(0,0,0,1)";
+
+}
+
+function showDatepickerDisplay(){
+
+var el = document.getElementById(this.id + "_picker");
+
+el.style.visibility = "visible";
+el.style.width = "1px";
+el.style.opacity = "0";
+el.focus();
+el.click();
+el.showPicker();
+
+}
+
+function changeDatepicker(){
+
+var today  = new Date(this.value);
+
+if(this.value == "" || this.value == "0000-00-00")
+ var myVal = "";
+else
+ var myVal = today.toLocaleDateString("lt-LT");
+
+document.getElementById(this.id.slice(0, -7)).value = myVal;
+document.getElementById("actualD" + this.id.slice(1, -7)).value = this.value;
+
+}
+
+
+
+function massAction(lang,module,areYouSureText,sendOtherEmailText){
+
+var actionToDo = document.getElementById("massActions").value;
+
+var idsSelected = [];
+var idsSelectedString = "";
+
+for(checkboxes=document.getElementsByName("id[]"),i=0;i<checkboxes.length;i++){
+
+if(checkboxes[i].checked){
+ idsSelected.push(checkboxes[i].value);
+ idsSelectedString = idsSelectedString + "&id[]=" + checkboxes[i].value;
+} 
+
+}
+
+if(idsSelected.length == 0)
+ return;
+ 
+var myAction = ""; 
+ 
+if(actionToDo == "sendOtherMassive")
+myAction = "sendMassive";
+ else
+myAction = actionToDo;
+ 
+url = "/index.php?lang=" + lang + "&class=" + module + "&action=" + myAction + idsSelectedString;
+ 
+switch(actionToDo) {
+
+case "export":
+(s=document.createElement("a")).href=url;
+s.download="inv24.zip";
+document.body.appendChild(s);
+document.body.style.cursor = "wait";
+s.click();
+break;
+
+case "downloadMassive":
+(s=document.createElement("a")).href=url;
+s.download="inv24.zip";
+document.body.appendChild(s);
+document.body.style.cursor="wait";
+void s.click();
+break;
+
+case "delete":
+if(confirm(areYouSureText) == 0)
+return;
+massActionAjax(url,idsSelectedString);
+break;
+
+case "sendMassive":
+massActionAjax(url,idsSelectedString);
+break;
+
+case "sendOtherMassive":
+
+var newEmail = prompt(sendOtherEmailText,"");
+
+if(newEmail == "" || !isEmail(newEmail))
+ return;
+ 
+idsSelectedString = idsSelectedString + "&differentToEmail=" + encodeURIComponent(newEmail);
+
+massActionAjax(url,idsSelectedString);
+break;
+
+default:
+ return;
+
+}
+
+}
+
+function massActionAjax(url,idsSelectedString){
+
+fetch(url, {
+    method: "POST",
+    headers: {"Content-Type":"application/x-www-form-urlencoded"},
+    body: "l=0" + idsSelectedString
+})
+  .then(function(response) {
+    return response.text();
+  })
+.then(function(data){ 
+
+document.location.reload();
+
+})
+
+}
+
+function isEmail(mail){
+
+ if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+    return true;
+ else
+  return false;
+ 
+}
+
+function fillGoodsV2(name,price,unit){
+
+document.getElementById("g_name").value = name;
+document.getElementById("g_price").value = price;
+document.getElementById("g_measurement").value = unit;
+
+if (matchMedia) {
+
+  var mq = window.matchMedia("(max-width: 1015px)");
+
+if (mq.matches)
+ document.getElementById("myproducts").scrollIntoView({ behavior: "smooth" });
+else
+ document.getElementById("mylightbox").scrollIntoView({ behavior: "smooth" });
+   
+}
+
+}
+
+
+function openMyNav() {
+  document.getElementById("leftMenuNavigationV1").style.display = "block";
+  document.getElementById("logOuterBlock").style.display = "block";
+  document.getElementById("userNavigation").style.display = "block";
+  
+  document.getElementById("leftMenuNavigationV1").style.width = "100%";
+  document.getElementById("logOuterBlock").style.width = "100%";
+  document.getElementById("userNavigation").style.width = "100%";
+}
+
+</script>
+<style>
+IMG {
+        image-rendering: -webkit-optimize-contrast;
+    }
+
+select[name="invoice_lang"],select[name="myClientsList"],select[name="transaction_type"],select[name="payment_method"],select[name="is_copy"],select[name="payment_method_pl"],select[name="payment_method_sk"] {
+  width:256px;
+}
+
+.tplimg{
+
+max-width:100%;
+border:1px solid #fff; 
+border-radius: 15px;
+image-rendering: -webkit-optimize-contrast;
+-webkit-box-shadow:0 0 10px rgba(50,50,50,.68);
+-moz-box-shadow:0 10px rgba(50,50,50,.68);
+box-shadow:0 0 10px rgba(50,50,50,.68);
+margin-top:3px;
+border: none !important;
+
+}
+
+.tplimg_current{
+
+-webkit-box-shadow:0 0 12px rgba(50,50,50,.98);
+-moz-box-shadow:0 0 12px rgba(50,50,50,.98);
+box-shadow:0 0 12px rgba(50,50,50,.98);
+
+}
+
+.tplimg:hover{ 
+-webkit-box-shadow:0 0 12px rgba(50,50,50,.98);
+-moz-box-shadow:0 0 12px rgba(50,50,50,.98);
+box-shadow:0 0 12px rgba(50,50,50,.98);
+border: none !important;
+outline: none !important;
+
+}
+
+.nicEdit-main{
+
+border-radius:0px !important;
+
+}
+
+</style>
+
+
+
+
+
+
+
+<meta http-equiv="origin-trial" content="A727AcAeLCei/ZogJHBlJUS63SxP6AeIROo7qXrkjrxkoxBu0eSSmypAHmGYwk4HjBMQp5nxCFODzfVnUIe31AQAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A727AcAeLCei/ZogJHBlJUS63SxP6AeIROo7qXrkjrxkoxBu0eSSmypAHmGYwk4HjBMQp5nxCFODzfVnUIe31AQAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" async="" src="./goodshow_files/f.txt"></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="./goodshow_files/m=el_main_css"></head>
+<body id="mainMenuShadow" bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="showLightbox(&#39;lt&#39;)">
+
+
+<div class="leftMenuNavigationV1" id="leftMenuNavigationV1">  
+<div style="color:white;font-weight:12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">qwe1@gmail.com</font></font></div>
+
+<ul class="userNavigation" id="userNavigation"> <li>
+<a href="https://www.inv24.lt/index.php?lang=lt&amp;class=user&amp;action=viewEditProfile"><img src="./goodshow_files/myUserData.png">
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Settings</font></font></a> </li><li>
+<a href="https://www.inv24.lt/index.php?lang=lt&amp;class=user&amp;action=viewAllInvoices"><img src="./goodshow_files/myOrders.png">
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Orders</font></font></a> </li><li id="current">
+<a href="https://www.inv24.lt/index.php?lang=lt&amp;class=invoices&amp;action=viewManage&amp;start_date=2023-02-10&amp;deadline=2023-06-10"><img src="./goodshow_files/myInvoices.png">
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Accounts Invoices</font></font></a></li> 
+
+<li>
+<a href="https://www.inv24.lt/index.php?lang=lt&amp;class=goods&amp;action=viewManage"><img src="./goodshow_files/myGoods.png">
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Goods</font></font></a></li>
+<li>
+<a href="https://www.inv24.lt/index.php?lang=lt&amp;class=clients&amp;action=viewManage"><img src="./goodshow_files/myClients.png">
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clients</font></font></a></li><div style="color:white;font-weight:12px; overflow: hidden; text-overflow: ellipsis"><li>
+<a href="https://www.inv24.lt/index.php?lang=lt&amp;class=schedule&amp;action=viewManage"><img src="./goodshow_files/myAutInvoices.png">
+<br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Recurring accounts</font></font></a> </li></div></ul>
+ </div>
+
+
+ <div class="logOuterBlock" id="logOuterBlock"><a style="color:white;" href="https://www.inv24.lt/index.php?lang=lt&amp;class=user&amp;action=logOut"><img class="myLogOuter" src="./goodshow_files/logOut.png"><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">disconnect</font></font></a></div>
+
+<style>
+
+.logOuterBlock{
+
+position:fixed;
+width:80px;
+text-align:center;
+bottom:10px;
+left:0px;
+z-index: 91;
+
+}
+
+.leftMenuNavigationV1 {
+	height:100%;
+	width:80px;
+	top:0px;
+	background-color:#699CAD;
+	position:fixed;
+	border-right:1px solid white;
+	padding-top:10px;
+	text-align:center;
+	color:white;
+	z-index: 90;
+	}
+	
+@media only screen and (min-width: 1501px) {
+
+.leftMenuNavigationV1 img {
+   height: 50px;
+}
+
+.myLogOuter{
+   height: 26px;
+}
+
+}
+	
+@media only screen and (max-width: 1500px) {
+
+.leftMenuNavigationV1 img {
+   height: 25px;
+}
+
+.myLogOuter{
+   height: 15px;
+}
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+.leftMenuNavigationV1 img {
+   display: none;
+}
+
+.myLogOuter{
+   height: 20px;
+}
+
+}
+</style>
+
+
+<div class="mobileBottomMenu" id="mobileBottomMenu">
+<ul>
+<li id="current"><a href="https://www.inv24.lt/index.php?lang=lt&amp;class=invoices&amp;action=viewManage&amp;start_date=2023-02-10&amp;deadline=2023-06-10"><img src="./goodshow_files/myInvoices.png"><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Accounts Invoices</font></font></a></li>
+<li><a href="https://www.inv24.lt/index.php?lang=lt&amp;class=goods&amp;action=viewManage"><img src="./goodshow_files/myGoods.png"><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Goods</font></font></a></li>
+<li><a href="https://www.inv24.lt/index.php?lang=lt&amp;class=clients&amp;action=viewManage"><img src="./goodshow_files/myClients.png"><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clients</font></font></a></li>
+<li>
+<span onclick="openMyNav()" style="color:white; font-size:38px;cursor:pointer;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">☰</font></font></span>
+</li>
+</ul>
+</div> 
+
+<div id="contentwrap"> 
+
+
+
+
+
+<div style="clear:both;"> </div> 
+
+ 
+<form action="https://www.inv24.lt/index.php?lang=lt&amp;class=invoices&amp;action=add" id="mySuperForm" method="post">
+<table class="viewAddInvoiceMain"><tbody><tr>
+<td>
+
+<div style="border-radius:15px; border:1px solid #f4f4f4;">
+<table class="table-style view-edit-table hideOverflow">
+ 
+<tbody><tr><td colspan="2"><h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Previous account no.: </font></font><b style="color:red;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></b> </h2></td> </tr>
+
+<tr><td><span class="masterTooltip" data-title="Kokio tipo yra jūsų sąskaita faktūra?"><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Type</font></font></td><td><select onchange="window.location=&#39;/index.php?lang=lt&amp;class=invoices&amp;action=viewAdd&amp;invoice_type=&#39; + this.options[this.selectedIndex].value" name="type"><option value="0" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Invoice</font></font></option><option value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pre-invoice</font></font></option><option value="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Commercial offer</font></font></option><option value="3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Credit invoice</font></font></option><option value="4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Debit account invoice</font></font></option></select></td></tr>
+
+<tr><td><span class="masterTooltip" data-title="Šis laukelis automatiškai sugeneruoja jūsų sąskaitos faktūros numerį nebent jį norėtumėte pasirinkti ir nustatyti patys.
+"><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Account no</font></font></td><td>
+
+<input class="invoice_nr_prefix_suffix" onfocus="this.placeholder = &#39;&#39;" onblur="this.placeholder = &#39;Priešdėlis&#39;" placeholder="Prefix" type="text" name="invoice_nr_prefix" value="">
+
+<input class="invoice_nr" style="font-weight:bold;color:red;" type="text" name="invoice_nr" onfocus="if (this.value==&#39;4&#39;) this.value = &#39;&#39;;" onblur="if (this.value==&#39;&#39;) this.value = &#39;4&#39;;" value="4">
+
+<input class="invoice_nr_prefix_suffix" onfocus="this.placeholder = &#39;&#39;" onblur="this.placeholder = &#39;Priesaga&#39;" placeholder="Suffix" type="text" name="invoice_nr_suffix" value="">
+</td></tr>
+
+<tr><td><span class="masterTooltip" data-title="Sąskaitos faktūros išrašymo data. Ši data sugeneruojama automatiškai, nebent norite patys nustatyti pasirinktą datą.
+"><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Invoice date</font></font></td><td><input type="date" value="2023-05-11" id="date1_picker" style="visibility: hidden; position: absolute;"><input readonly="" id="date1" class="datepick" autocomplete="off" type="text" name="start_date_alt" value="2023-05-11" style="color: rgb(0, 0, 0);"></td></tr>
+<tr><td><span class="masterTooltip" data-title="Data iki kurios norite gauti apmokėjimą. Ši data sugeneruojama automatiškai nebent jūs norite patys nustatyti pasirinktą datą."><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Payment made to</font></font></td><td><input type="date" value="2023-05-25" id="date2_picker" style="visibility: hidden; position: absolute;"><input type="text" readonly="" id="date2" class="datepick" autocomplete="off" name="deadline_alt" value="2023-05-25" style="color: rgb(0, 0, 0);"></td></tr>
+
+<input id="actualDate1" type="hidden" name="start_date" value="2023-05-11">
+<input id="actualDate2" type="hidden" name="deadline" value="2023-05-25">
+
+  
+
+
+<input type="hidden" name="fine" value="">
+<input type="hidden" name="vat" value="0,00"><input type="hidden" name="currency" value="141"><input type="hidden" name="invoice_lang" value="lt"><input type="hidden" name="reference_number" value="">
+
+
+
+<tr><td><span class="masterTooltip" data-title="Jeigu turite instrukcijas ar informacijos, kurią norėtumėte įterpti į sąskaitą faktūrą, užpildykite šį laukelį ir duomenys atsiras apačioje."><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Notes</font></font></td><td><textarea name="free_text"></textarea></td></tr>
+<tr><td><span class="masterTooltip" data-title="Mūsų sąskaitos faktūros sistema leidžia jums siųsti sąskaitas faktūras tiesiai iš mūsų tinklalapio. Prašome užpildyti šį laukelį jeigu norite įvesti tekstą į elektroninio laiško formą."><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email text</font></font></td><td><textarea name="email_text"></textarea></td></tr>
+
+
+
+<tr><td><h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CLIENT LIST</font></font></h2></td><td><select name="myClientsList" class="pulsator" onclick="removeMyCss(this)" onchange="fillClients(this.value,&#39;lt&#39;)"><option value="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- - - - -</font></font></option>
+<option value="52740"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ass</font></font></option></select></td></tr>
+<tr><td><span class="masterTooltip" data-title="Jūsų kliento įmonės pavadinimas."><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company name</font></font></td><td><input style="font-weight:bold;" type="text" id="client_name" name="client_name" value=""></td></tr><tr><td><span class="masterTooltip" data-title="Kliento įmonės registracijos numeris, kuris bus nurodytas sąskaitose faktūrose. 
+"><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Customer company code</font></font></td><td><input type="text" id="client_personal_code" name="client_personal_code" value=""></td></tr><tr><td><span class="masterTooltip" data-title="Neprivalomas laukelis PVM registracijos numeriui, kuris bus nurodytas jūsų sąskaitose faktūrose"><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Customer's VAT payer code</font></font></td><td><input type="text" id="client_vat_number" name="client_vat_number" value=""></td></tr><tr><td><span class="masterTooltip" data-title="Adresas, kurį norite nurodyti sąskaitoje faktūroje."><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Customer address</font></font></td><td><textarea cols="40" rows="2" id="client_address" name="client_address"></textarea></td></tr>
+
+
+
+
+<tr><td><span class="masterTooltip" data-title="Kliento el. pašto adresas, kur bus siunčiami susiję el. laiškai."><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Customer email</font></font></td><td><input type="text" id="client_email" name="client_email" value=""></td></tr>
+
+ 
+ 
+</tbody></table>
+</div>
+
+</td><td style="padding-left:15px;padding-right:5px;">
+
+<div style="max-width:96%;border-radius:10px;">
+<table width="100%">
+<tbody><tr><td><h2 id="mylightbox"><span class="masterTooltip" data-title="Šioje skiltyje rodomi produktai / paslaugos, kuriuos pasirinkote įkelti į sąskaitą faktūrą."><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">List of products</font></font></h2></td></tr>
+<tr><td>
+
+<div id="korv"><table class="mftable korvTable">
+<thead>
+<tr>
+<th scope="col" width="240"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Title</font></font></b></th>
+<th scope="col" width="80"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Price</font></font></b></th>
+<th scope="col" width="60" style="text-align: center;"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quantity</font></font></b></th>
+<th scope="col" width="60" style="text-align: center;"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VAT(%)</font></font></b></th>
+<th scope="col" width="50" style="text-align: center;"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">delete</font></font></b></th> 
+<th></th></tr>
+</thead><tbody><tr>
+<td data-label="Pavadinimas"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ass</font></font></td>
+<td data-label="Kaina"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12.00</font></font></td>
+<td data-label="Kiekis" style="text-align: center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1 12</font></font></td>
+<td data-label="PVM(%)" style="text-align: center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12.00</font></font></td>
+<td data-label="Ištrinti" style="text-align: center;"><img style="cursor:pointer;" src="./goodshow_files/delete.png" onclick="deleteFromLightbox(1683798581,&#39;lt&#39;)"></td>
+<td></td>
+</tr>
+<input type="hidden" name="name_1" value="asd">
+<input type="hidden" name="price_1" value="12,00">
+<input type="hidden" name="vat_1" value="12">
+<input type="hidden" name="quantity_1" value="1">
+<input type="hidden" name="measurement_1" value="12"></tbody></table></div>
+
+ 
+</td></tr> </tbody></table>
+</div>
+<h2 id="myproducts"><span class="masterTooltip" data-title="Čia galite keisti produkto pavadinimą ir kainą. Taip pat galima pridėti produkto kiekį, kuris bus nurodytas jūsų sąskaitoje faktūroje.
+"><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Add product</font></font></h2>
+
+<div style="max-width:96%;background-color:#E8F3F7;border-radius:10px;padding:7px 10px 3px 10px;border:1px solid #ccc;">
+<table cellpadding="2" cellspacing="0" class="add_product_table"><tbody><tr> 
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Title</font></font><br>
+<input onblur="addToLightboxExtra(&#39;lt&#39;)" style="width:135px;" type="text" id="g_name" name="g_name" value=""> </td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Price</font></font><br><input onblur="addToLightboxExtra(&#39;lt&#39;)" style="width:45px;" type="text" id="g_price" name="g_price" value=""></td>
+
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VAT(%)</font></font><br><input style="width:35px;" type="text" id="g_vat" name="g_vat" onfocus="if (this.value==&#39;0,00&#39;) this.value = &#39;&#39;;" onblur="if (this.value==&#39;&#39;) this.value = &#39;0,00&#39;; addToLightboxExtra(&#39;lt&#39;);" value="0,00"> </td>
+
+
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quantity</font></font><br><input style="width:20px;" type="text" id="g_quantity" name="g_quantity" onfocus="if (this.value==&#39;1&#39;) this.value = &#39;&#39;;" onblur="if (this.value==&#39;&#39;) this.value = &#39;1&#39;; addToLightboxExtra(&#39;lt&#39;);" value="1"> </td>
+
+
+
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Matt</font></font><br><input style="width:20px;" type="text" id="g_measurement" name="g_measurement" onfocus="if (this.value==&#39;&#39;) this.value = &#39;&#39;;" onblur="if (this.value==&#39;&#39;) this.value = &#39;&#39;; addToLightboxExtra(&#39;lt&#39;);" value=""></td> 
+
+<td class="my_discounts_block"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Discount</font></font><br><input style="width:40px;" type="text" id="g_discount" name="g_discount" onfocus="if (this.value==&#39;0&#39;) this.value = &#39;&#39;;" onblur="if (this.value==&#39;&#39;) this.value = &#39;0&#39;; addToLightboxExtra(&#39;lt&#39;);" value="0"><select style="padding:3px !important;" onchange="addToLightboxExtra(&#39;lt&#39;)" id="g_discount_type" name="g_discount_type">
+<option value="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">%</font></font></option>
+<option value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sum</font></font></option>
+</select></td>
+
+
+<td><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input style="margin-bottom:10px;margin-right:10px;" class="lisaToote pulsator" type="button" onmouseover="removeMyCss(this)" onclick="addToLightbox(&#39;lt&#39;);cleanTheBox();" value="     Add"></font></font></td>
+
+
+
+</tr></tbody></table>
+</div>
+
+
+<br>
+<h2><span class="masterTooltip" data-title="Trumpas visų produktų sąrašas. Paspauskite ant bet kurios prekės ir pridėkite į jūsų sąskaitą faktūrą."><img src="./goodshow_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Goods</font></font></h2>
+
+<div style="max-width:96%;border:1px solid #ccc;border-radius:10px;padding:7px 10px 7px 10px;">
+<table class="table-style table-style2 productsTable">
+
+<tbody><tr><td colspan="2"><table style="width:100%;">
+<tbody><tr style="background-color:#f4f4f4 !important;border-radius:15px !important;overflow:hidden;"><td style="width:200px;padding-left:5px;"><span><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Title</font></font></b></span></td><td><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Price</font></font></b></td></tr>
+</tbody></table></td></tr><tr id="catid0"><td colspan="2"><table style="width:100%;"><tbody><tr><td style="width:200px;"><span style="cursor:pointer;text-decoration:underline;" class="toodeteList" onclick="fillGoodsV2(&#39;asd&#39;,&#39;12,00&#39;,&#39;12&#39;);addToLightboxExtra(&#39;lt&#39;);"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ass</font></font></span></td><td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">€12.00</font></font></td></tr></tbody></table></td></tr>
+
+</tbody></table>
+</div>
+ 
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input class="arveEelvaade pulsator" onmouseover="removeMyCss(this)" type="submit" name="save_button" value="SAVE THE INVOICE "></font></font> &nbsp;&nbsp;&nbsp;
+<br><br>
+<span><i></i></span>
+</td>
+</tr></tbody></table>
+
+
+</form><script type="text/javascript">
+
+function addToLightboxExtra(lang){
+
+var name = document.getElementById("g_name").value;
+var price = document.getElementById("g_price").value;
+var quantity = document.getElementById("g_quantity").value;
+var measurement = document.getElementById("g_measurement").value;
+var vat = document.getElementById("g_vat").value;
+var discount = document.getElementById("g_discount").value;
+var discountType = document.getElementById("g_discount_type").value;
+
+if(name == '' || price == '')
+ return;
+
+var url = "index.php?class=invoices&action=addToLightbox&is_extra=1&lang=" + lang;
+
+var params = "g_name=" + encodeURIComponent(name) + "&g_price=" + price + "&g_quantity=" + quantity + "&g_measurement=" + encodeURIComponent(measurement) + 
+"&g_vat=" + vat + "&g_discount=" + discount + "&g_discount_type=" + discountType;
+
+const request = new XMLHttpRequest();
+request.open("POST", url);
+request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+request.send(params);
+
+}
+
+function cleanTheBox(){
+
+document.getElementById("g_name").value = "";
+document.getElementById("g_price").value = "";
+document.getElementById("g_quantity").value = "1";
+document.getElementById("g_measurement").value = "";
+
+}
+</script>
+ 
+ <div style="clear:both;"> </div>
+<div class="menubox">  <div style="padding:8px 20px 0px 20px;"><div style="float:left;padding-top:3px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Inv24 © 2023</font></font></div> </div></div>
+
+
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78874400-2', 'auto');
+  ga('send', 'pageview');
+
+</script><div id="goog-gt-" class="skiptranslate VIpgJd-yAWNEb-L7lbkb" dir="ltr"><div style="padding: 8px;"><div><div class="VIpgJd-yAWNEb-l4eHX"><img src="./goodshow_files/translate_24dp.png" width="20" height="20" alt="Google Translate"></div></div></div><div style="padding: 8px; float: left; width: 100%;"><h1 class="VIpgJd-yAWNEb-r4nke VIpgJd-yAWNEb-mrxPge">Original text</h1></div><div style="padding: 8px;"><div class="VIpgJd-yAWNEb-nVMfcd-fmcmS"></div></div><div class="VIpgJd-yAWNEb-cGMI2b" style="padding: 8px;"><div class="VIpgJd-yAWNEb-Z0Arqf-PLDbbf"><span class="VIpgJd-yAWNEb-Z0Arqf-hSRGPd">Contribute a better translation</span></div><div class="VIpgJd-yAWNEb-fw42Ze-Z0Arqf-haAclf"><hr style="color: #ccc; background-color: #ccc; height: 1px; border: none;"><div class="VIpgJd-yAWNEb-Z0Arqf-H9tDt"></div></div></div><div class="VIpgJd-yAWNEb-jOfkMb-Ne3sFf" style="display: none;"></div></div>
+
+
+</body></html>

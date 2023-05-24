@@ -1,0 +1,83 @@
+{% include 'account/base.html'%}
+<div id="contentwrap"> 
+<div style="clear:both;"> </div> 
+<ul id="tabs">
+    <li><a href="{% url "userprofile" %}"  name="tab1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">User profile</font></font></a></li>
+    <li><a href="{% url "saveusercompany1" %}" name="tab2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company's data</font></font></a></li>
+    <li id="current"><a href="" name="tab3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Payment details</font></font></a></li>
+    <li><a href="" name="tab4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email settings</font></font></a></li>
+    <li><a href="" name="tab5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Invoice Settings</font></font></a></li>
+    <li><a href="" name="tab6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Templates</font></font></a></li>
+</ul>
+	<form action="" id="userdataform" method="post" enctype="multipart/form-data">
+	
+<div id="content"><div id="tab3">
+
+	<div class="tabDiv"> 
+	<table class="table-style view-edit-table"> 
+<tbody><tr><td><span class="masterTooltip" data-title="Jūsų banko pavadinimas yra reikalingas norint gauti greitus elektroninius pavedimus. Pavyzdys: City Bank"><img src="./Inv242_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name of the bank:  </font></font></td><td>{{user_form.bankname}}</td></tr>
+<tr><td><span class="masterTooltip" data-title="Jūs galite pasirinkti įvesti savo banko sąskaitos numerį arba IBAN sąskaitos numerį (Europos šalyse) ‒ šios informacijos reikia greitiems elektroniniams pavedimams."><img src="./Inv242_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bank account (IBAN):  </font></font></td><td>{{user_form.bankaccount}}</td></tr>
+
+<tr><td><span class="masterTooltip" data-title="Reikia įvesti SWIFT/BIC kodą"><img src="./Inv242_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SWIFT:  </font></font></td><td>{{user_form.swift}}</td></tr>
+
+
+
+
+<tr><td><span class="masterTooltip" data-title="Nustatykite PVM % šiame laukelyje."><img src="./Inv242_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VAT(%):  </font></font></td><td>{{user_form.vat}}</td></tr>
+<tr><td><span class="masterTooltip" data-title="Ar PVM jau įtrauktas į jūsų kainas, ar bus pridėtas prie kainos?"><img src="./Inv242_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prices with VAT:  </font></font></td><td><select name="vat_in_price"><option value="0" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></option><option value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></option></select></td></tr><input type="hidden" name="currency" value="141">
+ <input type="hidden" name="next_schedule_nr" value="136">
+
+
+	</tbody></table>
+	</div>
+</div></div><script type="text/javascript">
+
+
+document.getElementById("userdataform").addEventListener("change", saveFormDataAsinc);
+
+document.querySelectorAll('input[name="pic_path"]').forEach(el => el.addEventListener("change", submitTheLogo));
+
+function submitTheLogo(){
+
+document.getElementById("userdataform").submit();
+
+}
+
+async function saveFormDataAsinc(event){
+
+if(event.target.type == "file" || event.target.type == "password")
+ return;
+
+var form = document.getElementById("userdataform");
+var url = form.action;
+
+const request = new XMLHttpRequest();
+request.open("POST", url);
+request.send(new FormData(form));
+
+}
+
+</script>
+
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input class="bigButton" style="margin-top:5px;" type="submit" value="Save"></font></font>
+	</form>
+
+	
+	
+ 
+ <div style="clear:both;"> </div>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78874400-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body></html>

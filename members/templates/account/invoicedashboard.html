@@ -1,0 +1,74 @@
+{% include 'account/base.html' %}
+{% load static %}
+<div id="contentwrap"> 
+<div style="clear:both;"> </div> 
+
+ 
+<div id="filtersBox"> <div class="currenciesList" style="float:right;font-weight:bold;"> </div>
+<table>
+<form action="https://www.inv24.lt/index.php" method="GET"></form>
+<input type="hidden" name="lang" value="lt">
+<input type="hidden" name="class" value="invoices">
+<input type="hidden" name="action" value="viewManage">
+<tbody><tr>
+
+
+<td><span id="filtersDateTxt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Invoice date:</font></font></span> <input type="date" value="2023-02-08" id="date1_picker" style="visibility: hidden; position: absolute;"><input readonly="" style="padding: 5px; background-color: white; width: 72px; color: rgb(0, 0, 0);" id="date1" class="datepick" autocomplete="off" type="text" name="start_date_alt" value="2023-02-08"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-</font></font></td>
+<td style="padding-left:0px;"><input type="date" value="2023-06-08" id="date2_picker" style="visibility: hidden; position: absolute;"><input readonly="" style="padding: 5px; background-color: white; width: 72px; color: rgb(0, 0, 0);" type="text" id="date2" class="datepick" autocomplete="off" name="deadline_alt" value="2023-06-08"></td>
+
+<input id="actualDate1" type="hidden" name="start_date" value="2023-02-08">
+<input id="actualDate2" type="hidden" name="deadline" value="2023-06-08">
+
+</tbody></table></div>
+
+
+
+<div style="margin:10px 0px;"><a href="{% url "saveinvoice1" %}" class="lisaUusArve"> <img src="{% static 'image/plus.png'%}" height="20"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> &nbsp;ADD NEW</font></font></a> </div>
+
+
+
+<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BILLS</font></font></h3>
+<div class="viewManageDiv">
+<table width="100%" class="table-style viewManageTable"><tbody><tr>
+<td class="table-heading" style="width:14px;"><input type="checkbox" onclick="toggle(this)"></td>
+<td class="table-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ACCOUNT NO</font></font></td>
+<td class="table-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">COMPANY NAME</font></font></td>
+<td class="table-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sum</font></font></td>
+<td class="table-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Edit</font></font></td>
+<td class="table-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Copy</font></font></td>
+<td class="table-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">delete</font></font></td>
+</tr>
+{% for a1 in new_user %}
+<tr><td  style="width:14px;"><input type="checkbox" onclick="toggle(this)"></td>
+  <td>
+   {{b.name}}
+    {{a1.accountnumber}} <a href="{% url 'pdf' a1.id %}"><img alt="PDF" src="{% static 'image/pdf.png' %}" style="position:relative;top:2px;width:15px;"></a></td><td>{{a1.companyname}}</td><td></td><td></td><td></td><td></td><tr>
+    {% endfor %}
+<form action="https://www.inv24.lt/index.php" metod="get"></form>
+<input type="hidden" name="lang" value="lt">
+<input type="hidden" name="class" value="invoices">
+
+</tbody></table>
+</div>
+<div id="massActionWrap"><select id="massActions" name="action">><option value="export"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Download(.pdf)</font></font></option></select><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input onclick="massAction(&#39;lt&#39;,&#39;invoices&#39;,&#39;Ar tikrai?&#39;,&#39;Siųsti į kitą el.paštą&#39;);" type="button" value="OK"></font></font> </div>
+
+
+ 
+ <div style="clear:both;"> </div>
+
+
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78874400-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body></html>

@@ -1,0 +1,37 @@
+{% include 'account/base.html'%}
+<div id="contentwrap"> 
+    <div style="clear:both;"> </div> 
+    
+     <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+    <table width="100%" class="table-style view-edit-table hideOverflow">
+     
+    
+    <tbody><tr><td colspan="2"><h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CUSTOMERS - ADD</font></font></h2></td></tr>
+     <tr><td><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company name*:</font></font></b></td>
+     <td>{{user_form.companyname}}</td></tr><tr><td><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company code:</font></font></b></td>
+     <td>{{user_form.companycode}}</td></tr><tr><td><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VAT code:</font></font></b></td>
+     <td>{{user_form.vatcode}}</td></tr><tr><td cols="2"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Address:</font></font></b></td><td>
+     {{user_form.address}}</td></tr><tr><td><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E. mail:</font></font></b></td>
+     <td>{{user_form.email}}</td></tr>
+    </tbody></table>
+    <br>
+    
+    <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input class="bigButton" type="submit" value="Save"></font></font>
+    
+    </form>
+    <br><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Do you need additional applicable insert boxes? </font></font><a class="myNormalLink" href=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Click here</font></font></a>   
+     <div style="clear:both;"> </div>
+    </div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-78874400-2', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+    

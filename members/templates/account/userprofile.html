@@ -1,0 +1,77 @@
+{% include 'account/base.html'%}
+<div id="contentwrap"> 
+<div style="clear:both;"> </div> 
+
+ 
+<ul id="tabs">
+    <li id="current"><a href="" name="tab1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">User profile</font></font></a></li>
+    <li><a href="{% url "saveusercompany1" %}" name="tab2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company's data</font></font></a></li>
+    <li><a href="{% url "saveuserpayment1" %}" name="tab3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Payment details</font></font></a></li>
+    <li><a href="" name="tab4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email settings</font></font></a></li>
+    <li><a href="" name="tab5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Invoice Settings</font></font></a></li>
+    <li><a href="" name="tab6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Templates</font></font></a></li>
+</ul>
+
+
+
+	<form action="https://www.inv24.lt/index.php?lang=lt&amp;class=user&amp;action=editProfile" id="userdataform" method="post" enctype="multipart/form-data">
+	
+<div id="content"><div id="tab1">
+ 		<div class="tabDiv"> 
+				<table class="table-style view-edit-table">
+						<tbody><tr><td width="220"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">User*:</font></font></td><td><input type="text" name="userLogin" value={{new_user.username}}></td></tr>
+	
+		<tr><td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Password*:</font></font></td><td><input type="password" name="password1" value={{new_user.password}}></td></tr>
+		
+		<tr><td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Repeat the password*:</font></font></td><td><input type="password" name="password2" value={{new_user.password}}></td></tr>
+				<tr><td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E. mail*:  </font></font></td>
+				<td><input type="text" name="email" value={{new_user.email}}></td>				</tr>
+				
+				</tbody></table>
+		</div>
+	</div></div><script type="text/javascript">
+
+
+document.getElementById("userdataform").addEventListener("change", saveFormDataAsinc);
+
+document.querySelectorAll('input[name="pic_path"]').forEach(el => el.addEventListener("change", submitTheLogo));
+
+function submitTheLogo(){
+
+document.getElementById("userdataform").submit();
+
+}
+
+async function saveFormDataAsinc(event){
+
+if(event.target.type == "file" || event.target.type == "password")
+ return;
+
+var form = document.getElementById("userdataform");
+var url = form.action;
+
+const request = new XMLHttpRequest();
+request.open("POST", url);
+request.send(new FormData(form));
+
+}
+
+</script>
+
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input class="bigButton" style="margin-top:5px;" type="submit" value="Save"></font></font>
+	</form>
+ <div style="clear:both;"> </div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78874400-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body></html>

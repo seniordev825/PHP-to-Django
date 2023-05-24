@@ -1,0 +1,108 @@
+<html>
+<head>
+<style>
+    table {
+        width: 100%;
+        font-family:Arial
+      }
+      td{
+        font-size:15px
+      }
+      .a{
+        border-top:1px solid black;
+        margin-bottom:20px;
+        margin-top:40px;
+      }
+</style>
+</head>
+
+<body style="margin-left:15px">
+  <div>
+    <div>
+      <br>
+      <br>
+      <br>
+      <br>
+        <h1>Bill To:</h1>
+        <h1>{{a.companyname}}</h1>
+        <table>
+            <tr>
+              <td>{{a.address}}</td>
+              <td></td>
+              <td>Invoice Date:{{a.date|date:'m/d/Y'}}</td>
+            </tr>
+            <tr>
+              <td>Reg nr: {{a.companycode}}</td>      
+              <td></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Due Date:{{a.paydate|date:'m/d/Y'}}</td>
+            </tr>
+          </table>
+        <h1>TAX nr: {{a.vatcode}}</h1>
+        </div>
+      </div>
+        <div style="text-align:center;font-size:30px;margin-bottom:60px">Invoice # {{a.id}}</div>
+        <table>
+            <tr>
+              <td><b>Description</b></td>
+              <td></td>
+              <td><b>Qty</b></td>
+              <td><b>Unit Price</b></td>
+              <td><b>Subtotal</b></td>
+              <td><b>TAX</b></td>
+            </tr>
+            {% for d2 in d2 %}
+            <tr>  
+              <td>{{d2.title}}</td>
+              <td></td>
+              <td>{{d2.quantity}}</td>
+              <td>{{d2.price}}</td>
+              <td>{{d2.subtotal}}</td>
+              <td>{{d2.tax}}({{d2.vat}}%)</td>
+            </tr>
+            {% endfor %}
+          </table>
+              <table style="margin-top:40px">
+            <tr class="a">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              <td>Subtotal:{{d1}}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>TAX:{{d3}}</td>
+                
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b>Total:${{d4}}</b></td>        
+              </tr>
+            </table>
+            <table style="margin-top:80px;">
+              <tr>
+                <td><b>{{b.name}}</b></td>
+                <td></td>
+                <td>{{b.address}}</td>
+                <td>{{c.bankname}}</td>
+              </tr>
+              <tr>
+                <td>Reg nr: {{b.code}}</td>
+                <td></td>
+                <td>{{b.phone}}</td>
+                <td>{{c.bankaccount}}</td>
+              </tr>
+          </table>
+          <h1>TAX nr: {{b.vat}}</h1>
+        </div>
+</body>
+</html>

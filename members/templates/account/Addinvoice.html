@@ -1,0 +1,160 @@
+{% include 'account/base.html'%}
+
+<div id="contentwrap"> 
+
+
+
+
+
+<div style="clear:both;"> </div> 
+
+ 
+<form id="mySuperForm" method="post">
+  {% csrf_token%}
+<table class="viewAddInvoiceMain"><tbody><tr>
+<td>
+
+<div style="border-radius:15px; border:1px solid #f4f4f4;">
+<table class="table-style view-edit-table hideOverflow">
+
+<tbody><tr><td colspan="2"><h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Previous account no.: </font></font><b style="color:red;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></b> </h2></td> </tr>
+
+<tr><td><span class="masterTooltip" data-title="Kokio tipo yra jūsų sąskaita faktūra?"><img src="./Addinvoice_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Type</font></font></td><td><select onchange="" name="type"><option value="0" selected=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Invoice</font></font></option><option value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Credit invoice</font></font></option></select></td></tr>
+
+<tr><td><span class="masterTooltip" data-title="Šis laukelis automatiškai sugeneruoja jūsų sąskaitos faktūros numerį nebent jį norėtumėte pasirinkti ir nustatyti patys.
+"><img src="./Addinvoice_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Account number</font></font></td><td>
+{{user_form.accountnumber}}
+</td></tr>
+
+<tr><td><span class="masterTooltip" data-title="Sąskaitos faktūros išrašymo data. Ši data sugeneruojama automatiškai, nebent norite patys nustatyti pasirinktą datą.
+"><img src="./Addinvoice_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Invoice date</font></font></td><td>{{user_form.date}}</td></tr>
+<tr><td><span class="masterTooltip" data-title="Data iki kurios norite gauti apmokėjimą. Ši data sugeneruojama automatiškai nebent jūs norite patys nustatyti pasirinktą datą."><img src="./Addinvoice_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Payment made to</font></font></td><td>{{user_form.paydate}}</td></tr>
+<input id="actualDate1" type="hidden" name="start_date" value="2023-05-10">
+<input id="actualDate2" type="hidden" name="deadline" value="2023-05-24">
+<input type="hidden" name="fine" value="">
+<input type="hidden" name="vat" value="0,00"><input type="hidden" name="currency" value="141"><input type="hidden" name="invoice_lang" value="lt"><input type="hidden" name="reference_number" value="">
+<tr><td><h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CLIENT LIST</font></font></h2></td>
+</td></tr>
+<tr><td><span class="masterTooltip" data-title="Jūsų kliento įmonės pavadinimas."><img src="./Addinvoice_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company name</font></font></td><td>{{user_form2.companyname}}</td></tr><tr><td><span class="masterTooltip" data-title="Kliento įmonės registracijos numeris, kuris bus nurodytas sąskaitose faktūrose. 
+"><img src="./Addinvoice_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Customer company code</font></font></td><td>{{user_form2.companycode}}</td></tr><tr><td><span class="masterTooltip" data-title="Neprivalomas laukelis PVM registracijos numeriui, kuris bus nurodytas jūsų sąskaitose faktūrose"><img src="./Addinvoice_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Customer's VAT payer code</font></font></td><td>{{user_form2.vatcode}}</td></tr><tr><td><span class="masterTooltip" data-title="Adresas, kurį norite nurodyti sąskaitoje faktūroje."><img src="./Addinvoice_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Customer address</font></font></td><td>{{user_form2.address}}</td></tr>
+
+
+
+
+<tr><td><span class="masterTooltip" data-title="Kliento el. pašto adresas, kur bus siunčiami susiję el. laiškai."><img src="./Addinvoice_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Customer email</font></font></td><td>{{user_form2.email}}</td></tr>
+
+ 
+ 
+</tbody></table>
+</div>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input class="arveEelvaade pulsator" onmouseover="removeMyCss(this)" type="submit" name="save_button" value="SAVE THE INVOICE "></font></font>
+</td><td style="padding-left:15px;padding-right:5px;">
+
+</form>
+<form method="post" action="{% url 'saveproduct'%}">
+  {% csrf_token %}
+<div style="max-width:96%;border-radius:10px;">
+<table width="100%">
+<tbody><tr><td><h2 id="mylightbox"><span class="masterTooltip" data-title="Šioje skiltyje rodomi produktai / paslaugos, kuriuos pasirinkote įkelti į sąskaitą faktūrą."><img src="./Addinvoice_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">List of products</font></font></h2></td></tr>
+<tr><td>
+
+<div id="korv"><table class="mftable korvTable">
+<thead>
+<tr>
+  <th scope="col" width="240"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Title</font></font></b></th>
+  <th scope="col" width="80"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Price</font></font></b></th>
+  <th scope="col" width="60" style="text-align: center;"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quantity</font></font></b></th>
+  <th scope="col" width="60" style="text-align: center;"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VAT(%)</font></font></b></th>
+  <th scope="col" width="60" style="text-align: center;"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Subtotal</font></font></b></th>
+  <th scope="col" width="60" style="text-align: center;"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Totalprice</font></font></b></th>
+  <th></th></tr>
+  </thead><tbody><tr>
+    {% for p1 in p1%}
+    <tr>
+  <td data-label="Pavadinimas"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{p1.title}}</font></font></td>
+  <td data-label="Kaina"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font>{{p1.price}}</font></td>
+  <td data-label="Kiekis" style="text-align: center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{p1.quantity}}</font></font></td>
+  <td data-label="PVM(%)" style="text-align: center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{p1.vat}}</font></font></td>
+  <td data-label="PVM(%)" style="text-align: center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{p1.subtotal}}</font></font></td>
+  <td data-label="PVM(%)" style="text-align: center;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{p1.totalprice}}</font></font></td>
+    </tr>
+  {% endfor %}
+  <td></td>
+  </tr>
+</tbody></table></div>
+</td></tr> </tbody></table>
+</div>
+
+<h2 id="myproducts"><span class="masterTooltip" data-title="Čia galite keisti produkto pavadinimą ir kainą. Taip pat galima pridėti produkto kiekį, kuris bus nurodytas jūsų sąskaitoje faktūroje.
+"><img src="./Addinvoice_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Add product</font></font></h2>
+
+<div style="max-width:96%;background-color:#E8F3F7;border-radius:10px;padding:7px 10px 3px 10px;border:1px solid #ccc;">
+  <table class="table-style table-style2 productsTable">
+
+    </table>
+<table cellpadding="2" cellspacing="0" class="add_product_table"><tbody><tr> 
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Title</font></font><br>
+{{user_form1.title}} </td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Price</font></font><br>{{user_form1.price}}</td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VAT(%)</font></font><br>{{user_form1.vat}} </td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quantity</font></font><br>{{user_form1.quantity}} </td>
+<td><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input style="margin-bottom:10px;margin-right:10px;" class="lisaToote pulsator" type="button" onmouseover="removeMyCss(this)" onclick="addToLightbox(&#39;lt&#39;);cleanTheBox();" value="     Add"></font></font></td>
+</tr></tbody></table>
+</div>
+<br>
+<h2><span class="masterTooltip" data-title="Trumpas visų produktų sąrašas. Paspauskite ant bet kurios prekės ir pridėkite į jūsų sąskaitą faktūrą."><img src="./Addinvoice_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Goods</font></font></h2>
+
+<div style="max-width:96%;border:1px solid #ccc;border-radius:10px;padding:7px 10px 7px 10px;">
+  <table class="table-style table-style2 productsTable">
+    <tbody><tr style="background-color:#f4f4f4 !important;border-radius:15px !important;overflow:hidden;"><td style="width:200px;padding-left:5px;"><span><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Title</font></font></b></span></td><td><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Price</font></font></b></td></tr>
+    </tbody>
+    {% for p in p %}
+    <tr style="background-color:#f4f4f4 !important;border-radius:15px !important;overflow:hidden;"><td style="width:200px;padding-left:5px;"><span><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{p.title}}</font></font></b></span></td><td><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{p.price}}</font></font></b></td></tr>
+    {% endfor %}
+    </table>
+</div>
+ 
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input class="arveEelvaade pulsator" onmouseover="removeMyCss(this)" type="submit" name="save_button" value="SAVE THE PRODUCT "></font></font> &nbsp;&nbsp;&nbsp;
+<br><br>
+<span><i></i></span>
+</td>
+</tr></tbody></table>
+</form>
+<script type="text/javascript">
+function addToLightboxExtra(lang){
+var name = {{user_form1.title}}.value;
+var price = {{user_form1.title}}.value;
+var quantity ={{user_form1.title}}.value;
+var vat = {{user_form1.title}}.value;
+var discount = {{user_form1.totalprice}}.value;
+if(name == '' || price == '')
+ return;
+var url = "index.php?class=invoices&action=addToLightbox&is_extra=1&lang=" + lang;
+var params = "g_name=" + encodeURIComponent(name) + "&g_price=" + price + "&g_quantity=" + quantity +
+"&g_vat=" + vat + "&g_discount=" + discount;
+const request = new XMLHttpRequest();
+request.open("POST", url);
+request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+request.send(params);
+}
+function cleanTheBox(){
+document.getElementById("g_name").value = "";
+document.getElementById("g_price").value = "";
+document.getElementById("g_quantity").value = "1";
+document.getElementById("g_measurement").value = "";
+}
+</script> 
+ <div style="clear:both;"> </div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78874400-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body></html>

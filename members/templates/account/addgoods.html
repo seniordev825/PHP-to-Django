@@ -1,0 +1,36 @@
+
+{% include 'account/base.html' %}
+<div id="contentwrap"> 
+<div style="clear:both;"> </div> 
+ <form action="" method="post" enctype="multipart/form-data">
+	{% csrf_token%}
+<table width="100%" class="table-style view-edit-table hideOverflow">
+<tbody><tr><td colspan="2"><h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ITEMS - ADD</font></font></h2></td></tr>
+ <tr><td><b></b></td>
+ <td><select name="category"><option value="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">--Categories--</font></font></option></select></td></tr><tr><td><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Title*:</font></font></b></td>
+ <td>{{user_form1.title}}</td></tr><tr><td><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Price*:</font></font></b></td>
+ <td>{{user_form1.price}}</td></tr><tr><td><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Unit of measurement:</font></font></b></td>
+ <td>{{user_form1.unit}}</td></tr>
+</tbody></table>
+<br>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input class="bigButton" type="submit" value="Save"></font></font>
+
+</form><br><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Do you need additional applicable insert boxes? </font></font><a class="myNormalLink" href="https://www.inv24.lt/index.php?lang=lt&amp;class=customfields&amp;action=viewManage"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Click here</font></font></a>
+ 
+ <div style="clear:both;"> </div>
+
+
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78874400-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body></html>

@@ -1,0 +1,78 @@
+{% include 'account/base.html'%}
+<div id="contentwrap"> 
+<div style="clear:both;"> </div> 
+
+ 
+<ul id="tabs">
+    <li><a href="{% url "userprofile"%}" name="tab1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">User profile</font></font></a></li>
+    <li id="current"><a href="{% url "saveusercompany1" %}" name="tab2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company's data</font></font></a></li>
+    <li><a href="{% url "saveuserpayment1"%}"  name="tab3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Payment details</font></font></a></li>
+    <li><a href="" name="tab4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email settings</font></font></a></li>
+    <li><a href="" name="tab5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Invoice Settings</font></font></a></li>
+    <li><a href="" name="tab6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Templates</font></font></a></li>
+</ul>
+
+
+
+	<form action="" id="userdataform" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+<div id="content">
+ <div id="tab2">
+	<div class="tabDiv"> 
+	<table class="table-style view-edit-table"> 
+	<tbody><tr><td><span class="masterTooltip" data-title="Įmonės pavadinimas, kurį norite rodyti savo sąskaitose faktūrose. Pavyzdžiui: My Company SIA."><img src="./Inv241_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company name*:  </font></font></td><td>{{user_form.name}}</td></tr>
+<tr><td><span class="masterTooltip" data-title="Įveskite telefono numerį ir rajono kodą. Pavyzdžiui: +1(877) 888 1234"><img src="./Inv241_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phone:  </font></font></td><td>{{user_form.phone}}</td></tr>
+<tr><td><span class="masterTooltip" data-title="Adresas, kurį norite nurodyti sąskaitoje faktūroje."><img src="./Inv241_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Address:  </font></font></td><td>{{user_form.address}}</td></tr><tr><td><span class="masterTooltip" data-title="Įmonės registracijos numeris bus nurodytas sąskaitose faktūrose."><img src="./Inv241_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company code:  </font></font></td><td>{{user_form.code}}</td></tr><tr><td><span class="masterTooltip" data-title="Neprivalomas laukelis PVM registracijos numeriui, kuris bus nurodytas jūsų sąskaitose faktūrose"><img src="./Inv241_files/hint.png"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">VAT code:  </font></font></td><td>{{user_form.vat}}</td></tr>	
+</tbody></table>
+	</div>
+</div></div><script type="text/javascript">
+
+
+document.getElementById("userdataform").addEventListener("change", saveFormDataAsinc);
+
+document.querySelectorAll('input[name="pic_path"]').forEach(el => el.addEventListener("change", submitTheLogo));
+
+function submitTheLogo(){
+
+document.getElementById("userdataform").submit();
+
+}
+
+async function saveFormDataAsinc(event){
+
+if(event.target.type == "file" || event.target.type == "password")
+ return;
+
+var form = document.getElementById("userdataform");
+var url = form.action;
+
+const request = new XMLHttpRequest();
+request.open("POST", url);
+request.send(new FormData(form));
+
+}
+
+</script>
+
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input class="bigButton" style="margin-top:5px;" type="submit" value="Save"></font></font>
+	</form>
+
+	
+	
+ 
+ <div style="clear:both;"> </div>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78874400-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body></html>
